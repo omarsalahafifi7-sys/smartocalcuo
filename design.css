@@ -4,6 +4,8 @@
     height: 90vh;
     border: 1px solid black;
     border-radius: 10px;
+    color: white;
+    font-weight: 500;
 }
 .main-box>.box-one{
 width: 95%;
@@ -13,6 +15,7 @@ height: 88vh;
 margin-top: 6px;
 font-weight: bold;
 border-radius: 10px;
+background: linear-gradient(20deg,rgb(45,44,58) 10%, rgb(10,10,10) 40%);
 }
 .main-box>.box-one>.box-two> span{
 display: flex;
