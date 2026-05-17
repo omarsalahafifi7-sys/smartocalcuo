@@ -3,6 +3,7 @@
     <link href="design.css" rel="stylesheet"/>
 </head>
 <body>
+    <script src="calculations.js"></script>
     <div class="main-box">
         <section class="box-one">
             <artical class="box-one-top">
@@ -10,17 +11,17 @@
                     <span style="font-size: 19px;">SMARTOCALCO</span>
                     <span style="font-family: 'Times New Roman', Times, serif; font-size: 15px;" >made by omar salah</span>
                 </div>
-                <center>
+                <center style="margin-top: 4px;">
                      <code>MADE IN EGYPT</code>
                 </center>
 <div id="box-one-middle">
-    <input type="text"/>
+    <input type="text" id="result"/>
 </div >
 <span id="box-one-bottom">
-    <button>CONST</button>
-    <button>cotx</button>
-    <button>acot</button>
-    <button>ON</button>
+    <button onclick="cuberut()">3<sub>√</sub></button>
+    <button onclick="fourrut()">4<sub>√</sub></button>
+    <button onclick="fiverut()">5<sub>√</sub></button>
+    <button onclick="sqrt()">√</button>
     
 </span>
             </artical>
@@ -34,12 +35,12 @@
     <small>x<sup>7</sup></small>
     </span>
     <span>
-        <button>x<sup>2</sup></button>
-        <button>x<sup>3</sup></button>
-        <button>x<sup>4</sup></button>
-        <button>x<sup>5</sup></button>
-        <button>x<sup>6</sup></button>
-        <button>x<sup>7</sup></button>
+        <button onclick="x2()">x<sup>2</sup></button>
+        <button onclick="x3()">x<sup>3</sup></button>
+        <button onclick="x4()">x<sup>4</sup></button>
+        <button onclick="x5()">x<sup>5</sup></button>
+        <button onclick="x6()">x<sup>6</sup></button>
+        <button onclick="x7()">x<sup>7</sup></button>
     </span>
     <span>
         <small>x<sup>9</sup></small>
@@ -50,12 +51,12 @@
         <small>cotx</small>
     </span>
     <span>
-        <button>x<sup>9</sup></button>
-        <button>log</button>
-        <button>ln</button>
+        <button onclick="x9()">x<sup>9</sup></button>
+        <button onclick="log()">log</button>
+        <button onclick="ln()">ln</button>
         <button>e</button>
-        <button>cot</button>
-        <button>cotx</button>
+        <button onclick="cot()">cot</button>
+        <button onclick="coth()">coth</button>
     </span>
     <span>
         <small>asinh</small>
@@ -66,12 +67,12 @@
         <small>cosh</small>
     </span>
     <span>
-        <button>asinh</button>
-        <button>asin</button>
-        <button>sinh</button>
-        <button>sin</button>
-        <button>cos</button>
-        <button>cosh</button>
+        <button onclick="asinh()">asinh</button>
+        <button onclick="asin()">asin</button>
+        <button onclick="sinh()">sinh</button>
+        <button onclick="sin()">sin</button>
+        <button onclick="cos()">cos</button>
+        <button onclick="cosh()">cosh</button>
     </span>
     <span>
         <small>acos</small>
@@ -82,12 +83,12 @@
         <small>atanh</small>
     </span>
     <span>
-        <button>acos</button>
-        <button>acosh</button>
-        <button>tan</button>
-        <button>tanh</button>
-        <button>atan</button>
-        <button>atanh</button>
+        <button onclick="acos()">acos</button>
+        <button onclick="acosh()">acosh</button>
+        <button onclick="tan()">tan</button>
+        <button onclick="tanh()">tanh</button>
+        <button onclick="atan()">atan</button>
+        <button onclick="atanh()">atanh</button>
     </span>
     </div>
     <div class="box-three">
@@ -99,11 +100,11 @@
             <small>OFF</small>
         </span>
         <span>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>DEL</button>
-            <button>AC</button>
+            <button onclick="dis( '7' )">7</button>
+            <button onclick="dis( '8' )">8</button>
+            <button onclick="dis( '9' )">9</button>
+            <button onclick="del()">DEL</button>
+            <button onclick="ac()">AC</button>
         </span>
         <span>
             <small>MAT</small>
@@ -113,11 +114,11 @@
             <small>nCR</small>
         </span>
         <span>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>x</button>
-            <button>/</button>
+            <button onclick="dis( '4' )">4</button>
+            <button onclick="dis( '5' )">5</button>
+            <button onclick="dis( '6' )">6</button>
+            <button onclick="dis( '*' )">x</button>
+            <button onclick="dis( '/' )">/</button>
         </span>
         <span>
             <small>5-SUM</small>
@@ -127,11 +128,11 @@
             <small>a+bi</small>
         </span>
         <span>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>+</button>
-            <button>-</button>
+            <button onclick="dis( '1' )">1</button>
+            <button onclick="dis( '2' )">2</button>
+            <button onclick="dis( '3' )">3</button>
+            <button onclick="dis( '+' )">+</button>
+            <button onclick="dis( '-' )">-</button>
         </span>
          <span>
             <small>RND</small>
@@ -141,11 +142,11 @@
             <small>RE-IM</small>
         </span>
         <span>
-            <button>0</button>
-            <button>.</button>
+            <button onclick="dis( '0' )">0</button>
+            <button onclick="dis( '.' )">.</button>
             <button>EXP</button>
-            <button>ANS</button>
-            <button>=</button>
+            <button onclick="dis( 'ANS' )">ANS</button>
+            <button onclick="solve()">=</button>
         </span>
     </div>
     </section>
