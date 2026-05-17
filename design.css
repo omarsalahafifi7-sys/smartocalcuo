@@ -1,3 +1,10 @@
+body {
+background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+min-height: 100vh;  
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
 .main-box{
     width: 370px;
     box-shadow: 0 0 5px grey, inset 0 0 10px black;
@@ -6,6 +13,7 @@
     border-radius: 10px;
     color: white;
     font-weight: 500;
+    justify-content: center;
 }
 .main-box>.box-one{
 width: 95%;
